@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int a[10], n, i, pos, value;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    printf("Enter position to replace: ");
+    scanf("%d", &pos);
+
+    printf("Enter replacement value: ");
+    scanf("%d", &value);
+
+    a[pos - 1] = value;
+
+    printf("Array after replacement:\n");
+    for(i = 0; i < n; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}
