@@ -9,37 +9,36 @@ int main()
     {
         printf("\n1.Push\n2.Pop\n3.Display\n4.Exit");
         printf("\nEnter your choice: ");
-        scanf("%d", &ch);
+        scanf("%d",&ch);
 
         switch(ch)
         {
             case 1:
-                if(top == 4)
+                if(top==4)
                     printf("Stack Overflow");
                 else
                 {
                     printf("Enter element: ");
-                    scanf("%d", &item);
-                    stack[++top] = item;
-                    printf("Inserted element: %d", item);
+                    scanf("%d",&item);
+                    stack[++top]=item;
                 }
                 break;
 
             case 2:
-                if(top == -1)
+                if(top==-1)
                     printf("Stack Underflow");
                 else
-                    printf("Deleted element: %d", stack[top--]);
+                    printf("Deleted element: %d",stack[top--]);
                 break;
 
             case 3:
-                if(top == -1)
+                if(top==-1)
                     printf("Stack is Empty");
                 else
                 {
                     printf("Stack elements are:\n");
-                    for(i = top; i >= 0; i--)
-                        printf("%d\n", stack[i]);
+                    for(i=top;i>=0;i--)
+                        printf("%d\n",stack[i]);
                 }
                 break;
 
@@ -50,7 +49,7 @@ int main()
                 printf("Invalid Choice");
         }
 
-    } while(ch != 4);
+    }while(ch!=4);
 
     return 0;
 }
