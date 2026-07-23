@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int a[50], n, i;
+    int *p;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    printf("\nUsing array indexing:\n");
+    for(i = 0; i < n; i++)
+        printf("%d ", a[i]);
+
+    p = a;
+
+    printf("\nUsing pointer notation:\n");
+    for(i = 0; i < n; i++)
+        printf("%d ", *(p + i));
+
+    printf("\n\nAddress difference:\n");
+    for(i = 0; i < n - 1; i++)
+        printf("%ld\n", &a[i + 1] - &a[i]);
+
+    return 0;
+}
